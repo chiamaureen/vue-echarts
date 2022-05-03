@@ -1,0 +1,1280 @@
+{
+  "status": "success",
+  "failed_code": "",
+  "data": [
+    [
+      {
+        "name": "臺北市",
+        "value": 4
+      },
+      {
+        "name": "基隆市",
+        "value": 14
+      },
+      {
+        "name": "新北市",
+        "value": 13
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 11
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 12
+      },
+      {
+        "name": "新竹縣",
+        "value": 14
+      },
+      {
+        "name": "苗栗縣",
+        "value": 17
+      },
+      {
+        "name": "臺中市",
+        "value": 16
+      },
+      {
+        "name": "南投縣",
+        "value": 5
+      },
+      {
+        "name": "彰化縣",
+        "value": 17
+      },
+      {
+        "name": "新竹市",
+        "value": 15
+      },
+      {
+        "name": "雲林縣",
+        "value": 16
+      },
+      {
+        "name": "嘉義縣",
+        "value": 14
+      },
+      {
+        "name": "臺南市",
+        "value": 14
+      },
+      {
+        "name": "高雄市",
+        "value": 15
+      },
+      {
+        "name": "屏東縣",
+        "value": 8
+      },
+      {
+        "name": "恆春半島",
+        "value": 10
+      },
+      {
+        "name": "花蓮縣",
+        "value": 15
+      },
+      {
+        "name": "臺東縣",
+        "value": 10
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 12
+      },
+      {
+        "name": "澎湖縣",
+        "value": 5
+      },
+      {
+        "name": "連江縣",
+        "value": 12
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 3
+      },
+      {
+        "name": "基隆市",
+        "value": 10
+      },
+      {
+        "name": "新北市",
+        "value": 13
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 10
+      },
+      {
+        "name": "桃園市",
+        "value": 14
+      },
+      {
+        "name": "嘉義市",
+        "value": 11
+      },
+      {
+        "name": "新竹縣",
+        "value": 11
+      },
+      {
+        "name": "苗栗縣",
+        "value": 13
+      },
+      {
+        "name": "臺中市",
+        "value": 14
+      },
+      {
+        "name": "南投縣",
+        "value": 4
+      },
+      {
+        "name": "彰化縣",
+        "value": 15
+      },
+      {
+        "name": "新竹市",
+        "value": 12
+      },
+      {
+        "name": "雲林縣",
+        "value": 16
+      },
+      {
+        "name": "嘉義縣",
+        "value": 14
+      },
+      {
+        "name": "臺南市",
+        "value": 13
+      },
+      {
+        "name": "高雄市",
+        "value": 14
+      },
+      {
+        "name": "屏東縣",
+        "value": 6
+      },
+      {
+        "name": "恆春半島",
+        "value": 11
+      },
+      {
+        "name": "花蓮縣",
+        "value": 15
+      },
+      {
+        "name": "臺東縣",
+        "value": 11
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 13
+      },
+      {
+        "name": "澎湖縣",
+        "value": 3
+      },
+      {
+        "name": "連江縣",
+        "value": 12
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 3
+      },
+      {
+        "name": "基隆市",
+        "value": 13
+      },
+      {
+        "name": "新北市",
+        "value": 13
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 13
+      },
+      {
+        "name": "桃園市",
+        "value": 14
+      },
+      {
+        "name": "嘉義市",
+        "value": 9
+      },
+      {
+        "name": "新竹縣",
+        "value": 13
+      },
+      {
+        "name": "苗栗縣",
+        "value": 13
+      },
+      {
+        "name": "臺中市",
+        "value": 12
+      },
+      {
+        "name": "南投縣",
+        "value": 4
+      },
+      {
+        "name": "彰化縣",
+        "value": 15
+      },
+      {
+        "name": "新竹市",
+        "value": 13
+      },
+      {
+        "name": "雲林縣",
+        "value": 16
+      },
+      {
+        "name": "嘉義縣",
+        "value": 15
+      },
+      {
+        "name": "臺南市",
+        "value": 14
+      },
+      {
+        "name": "高雄市",
+        "value": 15
+      },
+      {
+        "name": "屏東縣",
+        "value": 6
+      },
+      {
+        "name": "恆春半島",
+        "value": 12
+      },
+      {
+        "name": "花蓮縣",
+        "value": 16
+      },
+      {
+        "name": "臺東縣",
+        "value": 9
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 15
+      },
+      {
+        "name": "澎湖縣",
+        "value": 3
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 13
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 4
+      },
+      {
+        "name": "基隆市",
+        "value": 13
+      },
+      {
+        "name": "新北市",
+        "value": 13
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 13
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 7
+      },
+      {
+        "name": "新竹縣",
+        "value": 13
+      },
+      {
+        "name": "苗栗縣",
+        "value": 14
+      },
+      {
+        "name": "臺中市",
+        "value": 14
+      },
+      {
+        "name": "南投縣",
+        "value": 3
+      },
+      {
+        "name": "彰化縣",
+        "value": 15
+      },
+      {
+        "name": "新竹市",
+        "value": 13
+      },
+      {
+        "name": "雲林縣",
+        "value": 16
+      },
+      {
+        "name": "嘉義縣",
+        "value": 15
+      },
+      {
+        "name": "臺南市",
+        "value": 14
+      },
+      {
+        "name": "高雄市",
+        "value": 15
+      },
+      {
+        "name": "屏東縣",
+        "value": 7
+      },
+      {
+        "name": "恆春半島",
+        "value": 12
+      },
+      {
+        "name": "花蓮縣",
+        "value": 16
+      },
+      {
+        "name": "臺東縣",
+        "value": 12
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 16
+      },
+      {
+        "name": "澎湖縣",
+        "value": 2
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 13
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 4
+      },
+      {
+        "name": "基隆市",
+        "value": 12
+      },
+      {
+        "name": "新北市",
+        "value": 13
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 12
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 10
+      },
+      {
+        "name": "新竹縣",
+        "value": 14
+      },
+      {
+        "name": "苗栗縣",
+        "value": 14
+      },
+      {
+        "name": "臺中市",
+        "value": 15
+      },
+      {
+        "name": "南投縣",
+        "value": 3
+      },
+      {
+        "name": "彰化縣",
+        "value": 16
+      },
+      {
+        "name": "新竹市",
+        "value": 14
+      },
+      {
+        "name": "雲林縣",
+        "value": 16
+      },
+      {
+        "name": "嘉義縣",
+        "value": 15
+      },
+      {
+        "name": "臺南市",
+        "value": 14
+      },
+      {
+        "name": "高雄市",
+        "value": 15
+      },
+      {
+        "name": "屏東縣",
+        "value": 7
+      },
+      {
+        "name": "恆春半島",
+        "value": 12
+      },
+      {
+        "name": "花蓮縣",
+        "value": 16
+      },
+      {
+        "name": "臺東縣",
+        "value": 11
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 15
+      },
+      {
+        "name": "澎湖縣",
+        "value": 3
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 13
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 5
+      },
+      {
+        "name": "基隆市",
+        "value": 12
+      },
+      {
+        "name": "新北市",
+        "value": 13
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 12
+      },
+      {
+        "name": "桃園市",
+        "value": 14
+      },
+      {
+        "name": "嘉義市",
+        "value": 9
+      },
+      {
+        "name": "新竹縣",
+        "value": 14
+      },
+      {
+        "name": "苗栗縣",
+        "value": 18
+      },
+      {
+        "name": "臺中市",
+        "value": 16
+      },
+      {
+        "name": "南投縣",
+        "value": 5
+      },
+      {
+        "name": "彰化縣",
+        "value": 17
+      },
+      {
+        "name": "新竹市",
+        "value": 15
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 16
+      },
+      {
+        "name": "臺南市",
+        "value": 15
+      },
+      {
+        "name": "高雄市",
+        "value": 16
+      },
+      {
+        "name": "屏東縣",
+        "value": 7
+      },
+      {
+        "name": "恆春半島",
+        "value": 12
+      },
+      {
+        "name": "花蓮縣",
+        "value": 17
+      },
+      {
+        "name": "臺東縣",
+        "value": 11
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 15
+      },
+      {
+        "name": "澎湖縣",
+        "value": 4
+      },
+      {
+        "name": "連江縣",
+        "value": 14
+      },
+      {
+        "name": "金門縣",
+        "value": 15
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 7
+      },
+      {
+        "name": "基隆市",
+        "value": 10
+      },
+      {
+        "name": "新北市",
+        "value": 12
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 11
+      },
+      {
+        "name": "桃園市",
+        "value": 14
+      },
+      {
+        "name": "嘉義市",
+        "value": 12
+      },
+      {
+        "name": "新竹縣",
+        "value": 15
+      },
+      {
+        "name": "苗栗縣",
+        "value": 18
+      },
+      {
+        "name": "臺中市",
+        "value": 16
+      },
+      {
+        "name": "南投縣",
+        "value": 5
+      },
+      {
+        "name": "彰化縣",
+        "value": 17
+      },
+      {
+        "name": "新竹市",
+        "value": 15
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 16
+      },
+      {
+        "name": "臺南市",
+        "value": 15
+      },
+      {
+        "name": "高雄市",
+        "value": 16
+      },
+      {
+        "name": "屏東縣",
+        "value": 9
+      },
+      {
+        "name": "恆春半島",
+        "value": 13
+      },
+      {
+        "name": "花蓮縣",
+        "value": 17
+      },
+      {
+        "name": "臺東縣",
+        "value": 13
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 15
+      },
+      {
+        "name": "澎湖縣",
+        "value": 4
+      },
+      {
+        "name": "連江縣",
+        "value": 14
+      },
+      {
+        "name": "金門縣",
+        "value": 14
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 7
+      },
+      {
+        "name": "基隆市",
+        "value": 9
+      },
+      {
+        "name": "新北市",
+        "value": 12
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 11
+      },
+      {
+        "name": "桃園市",
+        "value": 14
+      },
+      {
+        "name": "嘉義市",
+        "value": 13
+      },
+      {
+        "name": "新竹縣",
+        "value": 12
+      },
+      {
+        "name": "苗栗縣",
+        "value": 16
+      },
+      {
+        "name": "臺中市",
+        "value": 16
+      },
+      {
+        "name": "南投縣",
+        "value": 7
+      },
+      {
+        "name": "彰化縣",
+        "value": 17
+      },
+      {
+        "name": "新竹市",
+        "value": 12
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 16
+      },
+      {
+        "name": "臺南市",
+        "value": 16
+      },
+      {
+        "name": "高雄市",
+        "value": 16
+      },
+      {
+        "name": "屏東縣",
+        "value": 9
+      },
+      {
+        "name": "恆春半島",
+        "value": 13
+      },
+      {
+        "name": "花蓮縣",
+        "value": 17
+      },
+      {
+        "name": "臺東縣",
+        "value": 12
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 14
+      },
+      {
+        "name": "澎湖縣",
+        "value": 7
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 13
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 6
+      },
+      {
+        "name": "基隆市",
+        "value": 9
+      },
+      {
+        "name": "新北市",
+        "value": 11
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 10
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 12
+      },
+      {
+        "name": "新竹縣",
+        "value": 11
+      },
+      {
+        "name": "苗栗縣",
+        "value": 14
+      },
+      {
+        "name": "臺中市",
+        "value": 14
+      },
+      {
+        "name": "南投縣",
+        "value": 5
+      },
+      {
+        "name": "彰化縣",
+        "value": 16
+      },
+      {
+        "name": "新竹市",
+        "value": 12
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 16
+      },
+      {
+        "name": "臺南市",
+        "value": 16
+      },
+      {
+        "name": "高雄市",
+        "value": 17
+      },
+      {
+        "name": "屏東縣",
+        "value": 8
+      },
+      {
+        "name": "恆春半島",
+        "value": 13
+      },
+      {
+        "name": "花蓮縣",
+        "value": 17
+      },
+      {
+        "name": "臺東縣",
+        "value": 12
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 16
+      },
+      {
+        "name": "澎湖縣",
+        "value": 5
+      },
+      {
+        "name": "連江縣",
+        "value": 12
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 3
+      },
+      {
+        "name": "基隆市",
+        "value": 8
+      },
+      {
+        "name": "新北市",
+        "value": 10
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 9
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 11
+      },
+      {
+        "name": "新竹縣",
+        "value": 13
+      },
+      {
+        "name": "苗栗縣",
+        "value": 11
+      },
+      {
+        "name": "臺中市",
+        "value": 13
+      },
+      {
+        "name": "南投縣",
+        "value": 5
+      },
+      {
+        "name": "彰化縣",
+        "value": 14
+      },
+      {
+        "name": "新竹市",
+        "value": 13
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 15
+      },
+      {
+        "name": "臺南市",
+        "value": 15
+      },
+      {
+        "name": "高雄市",
+        "value": 16
+      },
+      {
+        "name": "屏東縣",
+        "value": 8
+      },
+      {
+        "name": "恆春半島",
+        "value": 13
+      },
+      {
+        "name": "花蓮縣",
+        "value": 17
+      },
+      {
+        "name": "臺東縣",
+        "value": 14
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 16
+      },
+      {
+        "name": "澎湖縣",
+        "value": 5
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 3
+      },
+      {
+        "name": "基隆市",
+        "value": 7
+      },
+      {
+        "name": "新北市",
+        "value": 10
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 7
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 9
+      },
+      {
+        "name": "新竹縣",
+        "value": 12
+      },
+      {
+        "name": "苗栗縣",
+        "value": 12
+      },
+      {
+        "name": "臺中市",
+        "value": 13
+      },
+      {
+        "name": "南投縣",
+        "value": 4
+      },
+      {
+        "name": "彰化縣",
+        "value": 14
+      },
+      {
+        "name": "新竹市",
+        "value": 11
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 15
+      },
+      {
+        "name": "臺南市",
+        "value": 15
+      },
+      {
+        "name": "高雄市",
+        "value": 16
+      },
+      {
+        "name": "屏東縣",
+        "value": 9
+      },
+      {
+        "name": "恆春半島",
+        "value": 13
+      },
+      {
+        "name": "花蓮縣",
+        "value": 16
+      },
+      {
+        "name": "臺東縣",
+        "value": 14
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 17
+      },
+      {
+        "name": "澎湖縣",
+        "value": 4
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 3
+      },
+      {
+        "name": "基隆市",
+        "value": 8
+      },
+      {
+        "name": "新北市",
+        "value": 10
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 7
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 8
+      },
+      {
+        "name": "新竹縣",
+        "value": 10
+      },
+      {
+        "name": "苗栗縣",
+        "value": 12
+      },
+      {
+        "name": "臺中市",
+        "value": 12
+      },
+      {
+        "name": "南投縣",
+        "value": 4
+      },
+      {
+        "name": "彰化縣",
+        "value": 14
+      },
+      {
+        "name": "新竹市",
+        "value": 10
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 16
+      },
+      {
+        "name": "臺南市",
+        "value": 16
+      },
+      {
+        "name": "高雄市",
+        "value": 17
+      },
+      {
+        "name": "屏東縣",
+        "value": 8
+      },
+      {
+        "name": "恆春半島",
+        "value": 13
+      },
+      {
+        "name": "花蓮縣",
+        "value": 17
+      },
+      {
+        "name": "臺東縣",
+        "value": 14
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 18
+      },
+      {
+        "name": "澎湖縣",
+        "value": 4
+      },
+      {
+        "name": "連江縣",
+        "value": 13
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ],
+    [
+      {
+        "name": "臺北市",
+        "value": 3
+      },
+      {
+        "name": "基隆市",
+        "value": 7
+      },
+      {
+        "name": "新北市",
+        "value": 10
+      },
+      {
+        "name": "宜蘭縣",
+        "value": 6
+      },
+      {
+        "name": "桃園市",
+        "value": 13
+      },
+      {
+        "name": "嘉義市",
+        "value": 9
+      },
+      {
+        "name": "新竹縣",
+        "value": 11
+      },
+      {
+        "name": "苗栗縣",
+        "value": 12
+      },
+      {
+        "name": "臺中市",
+        "value": 12
+      },
+      {
+        "name": "南投縣",
+        "value": 4
+      },
+      {
+        "name": "彰化縣",
+        "value": 14
+      },
+      {
+        "name": "新竹市",
+        "value": 10
+      },
+      {
+        "name": "雲林縣",
+        "value": 17
+      },
+      {
+        "name": "嘉義縣",
+        "value": 16
+      },
+      {
+        "name": "臺南市",
+        "value": 15
+      },
+      {
+        "name": "高雄市",
+        "value": 16
+      },
+      {
+        "name": "屏東縣",
+        "value": 9
+      },
+      {
+        "name": "恆春半島",
+        "value": 14
+      },
+      {
+        "name": "花蓮縣",
+        "value": 16
+      },
+      {
+        "name": "臺東縣",
+        "value": 15
+      },
+      {
+        "name": "蘭嶼綠島",
+        "value": 17
+      },
+      {
+        "name": "澎湖縣",
+        "value": 4
+      },
+      {
+        "name": "連江縣",
+        "value": 12
+      },
+      {
+        "name": "金門縣",
+        "value": 12
+      }
+    ]
+  ]
+}

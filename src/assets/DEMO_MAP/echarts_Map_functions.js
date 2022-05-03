@@ -6,14 +6,14 @@ function Reform_stids_of_city(stids_of_city){
         if(x=="恆春半島"){
            if(myCitys["屏東縣"]==="undefined"){
               myCitys["屏東縣"]=[]
-           };
+           }
            stids_of_city[x].forEach( function(y){
               myCitys["屏東縣"].push(y)
            });
         }else if(x=="蘭嶼綠島"){
            if(myCitys["臺東縣"]==="undefined"){
               myCitys["臺東縣"]=[]
-           };
+           }
            stids_of_city[x].forEach( function(y){
               myCitys["臺東縣"].push(y)
            });
@@ -22,14 +22,14 @@ function Reform_stids_of_city(stids_of_city){
            stids_of_city[x].forEach( function(y){
               myCitys[x].push(y)
            });
-        };
+        }
      });
      myCitys["基隆市"].push("466950")
      myCitys["基隆市"].push("C0B020")
      myCitys["高雄市"].push("469020")
      myCitys["高雄市"].push("468100")
      return myCitys
-};
+}
 //var stids_of_city_R = Reform_stids_of_city()
 
 function Reform_stids_of_town(){
@@ -52,12 +52,12 @@ function Reform_stids_of_town(){
    Object.keys( stids_of_town ).forEach( function(CityName){
       if( ignore_list.indexOf(CityName) <0){
          Rdata[CityName] = stids_of_town[CityName]
-      };
+      }
    });
    //console.log(Rdata)
    return Rdata 
    //return stids_of_town
-};
+}
 
 
 function Color_Translate(color_name){
@@ -80,8 +80,8 @@ function Color_Translate(color_name){
    }else if(color_name=="none"){
       return 0
       //return -99
-   };
-};
+   }
+}
       
       
 function cal_color2val(val_Aw,val_Gw){
@@ -90,7 +90,7 @@ function cal_color2val(val_Aw,val_Gw){
    var color_name = set_color(scale_valA , scale_valG)
    var color_val = Color_Translate( color_name  )
    return color_val
-};
+}
       
 
 
@@ -103,11 +103,11 @@ function get_ArrayMax_index(arr){
         if( tVal >= thVal_Max ){
           thVal_Max = tVal
          thVal_Max_ind = i
-       };
-     };
-   };
+       }
+     }
+   }
    return [thVal_Max, thVal_Max_ind]
-};
+}
 
 
 
@@ -175,7 +175,7 @@ function get_Data_NowTable(Fid_WebDate){
                         CheckDate_Et = data["times"][Fid_WebDate+6].split("T")[1].replace(":","")
                         var rTmp_A  = get_ArrayMax_index( Std_Data["speed"].slice(Fid_WebDate,Fid_WebDate+6) )
                         var rTmp_G  = get_ArrayMax_index( Std_Data["gust"].slice(Fid_WebDate,Fid_WebDate+6) )
-                     };
+                     }
 
                      /* 比對出 該測站的最大陣風 & 時間 */
                      max_std_gust = -99
@@ -186,14 +186,14 @@ function get_Data_NowTable(Fid_WebDate){
                            if( parseFloat( Std_Data["gust"][ixy]) >= max_std_gust){
                               max_std_gust      = parseFloat( Std_Data["gust"][ixy])
                               max_std_gust_time = Std_Data["times"][ixy]
-                           };
-                        };
-                     };
+                           }
+                        }
+                     }
                      if(max_std_gust_time!="-"){
                         str_gust_time = String(max_std_gust_time)
                         max_std_gust_time  = data["times"][Fid_WebDate].split("T")[0]
                         max_std_gust_time += "T"+str_gust_time.slice(0,2) +":"+ str_gust_time.slice(2,4)
-                     };
+                     }
 
                      /* 統整該測站的資訊 */
                      send_Data["wind_avg"]       = rTmp_A[0]
@@ -211,13 +211,13 @@ function get_Data_NowTable(Fid_WebDate){
                   }else{
                      TEMP_S["value"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                      TEMP_S["ovalue"]= [ th_std_info["lon"], th_std_info["lat"], missing_value]
-                  };
+                  }
                   TEMP_S["type"]  = "wind"
                   TEMP_S["time"]  = send_Data["wind_time"]
                }else{
                   TEMP_S["value"] =  [ th_std_info["lon"], th_std_info["lat"], missing_value]
                   TEMP_S["ovalue"]=  [ th_std_info["lon"], th_std_info["lat"], missing_value]
-               };
+               }
                CTS_Data_S[TEMP_S_name] = TEMP_S
 
                /* 比對 該站的平均風 是否有比該鄉鎮的目前記錄還高 */
@@ -235,10 +235,10 @@ function get_Data_NowTable(Fid_WebDate){
                   TownMax_dir_ind   = parseInt(rTmp_A[1]) + parseInt(Fid_WebDate)
                   TownMax_avgW_dir  = data["wind"][key_stids]["dir"][ TownMax_dir_ind]
                   Flag_Std = true
-               };
+               }
 
             }else if(Std_Data="-"){
-               if( typeof data["stids"][key_stids] == 'undefined'){return};
+               if( typeof data["stids"][key_stids] == 'undefined'){return}
                var TEMP_S = {}
                var th_std_info = data["stids"][key_stids]
                console.log("##Lost station:", th_std_info["name"],key_stids )
@@ -248,7 +248,7 @@ function get_Data_NowTable(Fid_WebDate){
                TEMP_S["ovalue"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                TEMP_S["ref"]    = th_std_info
                CTS_Data_S[TEMP_S_name] = TEMP_S
-            };
+            }
          }); /* End of Stids in Town */
 
 
@@ -273,7 +273,7 @@ function get_Data_NowTable(Fid_WebDate){
                Rank_Std["MaxVal_dir_ind"]  = TownMax_dir_ind
                Rank_Std["wind"]            = dict_temp
                max_Town_avg = TownMax_ref
-            };
+            }
 
             var Flag_datatype_2 = (typeof data["wind"][TownMax_name] !== 'undefined')
             if( Flag_datatype_2 ){
@@ -284,12 +284,12 @@ function get_Data_NowTable(Fid_WebDate){
                TEMP_D["name"]  = key_citys + key_towns
                TEMP_D["time"]  = data["times"][Fid_WebDate]
                TEMP_D["value"] = missing_value
-            };
+            }
          }else{
             TEMP_D["name"]  = key_citys + key_towns
             TEMP_D["time"]  = data["times"][Fid_WebDate]
             TEMP_D["value"] = missing_value
-         };
+         }
          CTS_Data_F.push(TEMP_D)
       });
       /* End of 計算Map1 : CTS_Data_F  */
@@ -297,7 +297,7 @@ function get_Data_NowTable(Fid_WebDate){
    console.log("CTS_Data_F:",CTS_Data_F)
    console.log("CTS_Data_S:",CTS_Data_S)
    return [CTS_Data_F,CTS_Data_S]
-};
+}
 /* End of 日前的風力 in 10min */
 
 
@@ -365,14 +365,14 @@ function get_Data_LastHourGustTable(Fid_WebDate){
                            if( parseFloat( Std_Data["gust"][ixy]) >= max_std_gust){
                               max_std_gust      = parseFloat( Std_Data["gust"][ixy])
                               max_std_gust_time = Std_Data["times"][ixy]
-                           };
-                        };
-                     };
+                           }
+                        }
+                     }
                      if(max_std_gust_time!="-"){
                         str_gust_time = String(max_std_gust_time)
                         max_std_gust_time  = data["times"][New_Fid_WebDate].split("T")[0]
                         max_std_gust_time += "T"+str_gust_time.slice(0,2) +":"+ str_gust_time.slice(2,4)
-                     };
+                     }
 
 
                      /* 統整該測站的資訊 */
@@ -392,13 +392,13 @@ function get_Data_LastHourGustTable(Fid_WebDate){
                   }else{
                      TEMP_S["value"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                      TEMP_S["ovalue"]= [ th_std_info["lon"], th_std_info["lat"], missing_value]
-                  };
+                  }
                   TEMP_S["type"]  = "wind"
                   TEMP_S["time"]  = send_Data["wind_time"]
                }else{
                   TEMP_S["value"] =  [ th_std_info["lon"], th_std_info["lat"], missing_value]
                   TEMP_S["ovalue"]=  [ th_std_info["lon"], th_std_info["lat"], missing_value]
-               };
+               }
                CTS_Data_S[TEMP_S_name] = TEMP_S
 
                /* 比對 該站的平均風 是否有比該鄉鎮的目前記錄還高 */
@@ -417,10 +417,10 @@ function get_Data_LastHourGustTable(Fid_WebDate){
                   TownMax_dir_ind   = parseInt(rTmp_A[1]) + parseInt(New_Fid_WebDate)
                   TownMax_avgW_dir  = Std_Data["dir"][ TownMax_dir_ind]
                   Flag_Std = true
-               };
+               }
 
             }else if(Std_Data="-"){
-               if( typeof data["stids"][key_stids] == 'undefined'){return};
+               if( typeof data["stids"][key_stids] == 'undefined'){return}
                var TEMP_S = {}
                var th_std_info = data["stids"][key_stids]
                console.log("##Lost station:", th_std_info["name"],key_stids )
@@ -430,7 +430,7 @@ function get_Data_LastHourGustTable(Fid_WebDate){
                TEMP_S["ovalue"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                TEMP_S["ref"]    = th_std_info
                CTS_Data_S[TEMP_S_name] = TEMP_S
-            };
+            }
          }); /* End of Stids in Town */
 
 
@@ -455,7 +455,7 @@ function get_Data_LastHourGustTable(Fid_WebDate){
                Rank_Std["MaxVal_dir_ind"]  = TownMax_dir_ind
                Rank_Std["wind"]            = dict_temp
                max_Town_avg = TownMax_ref
-            };
+            }
 
             var Flag_datatype_2 = (typeof data["wind"][TownMax_name] !== 'undefined')
             if( Flag_datatype_2 ){
@@ -466,12 +466,12 @@ function get_Data_LastHourGustTable(Fid_WebDate){
                TEMP_D["name"]  = key_citys + key_towns
                TEMP_D["time"]  = data["times"][New_Fid_WebDate]
                TEMP_D["value"] = missing_value
-            };
+            }
          }else{
             TEMP_D["name"]  = key_citys + key_towns
             TEMP_D["time"]  = data["times"][New_Fid_WebDate]
             TEMP_D["value"] = missing_value
-         };
+         }
          CTS_Data_F.push(TEMP_D)
       });
       /* End of 計算Map1 : CTS_Data_F  */
@@ -479,7 +479,7 @@ function get_Data_LastHourGustTable(Fid_WebDate){
    console.log("CTS_Data_F:",CTS_Data_F)
    console.log("CTS_Data_S:",CTS_Data_S)
    return [CTS_Data_F,CTS_Data_S]
-};
+}
 /* End of 前1小時的陣風 */
 
 
@@ -539,7 +539,7 @@ function get_Data_MainTable(Fid_WebDate){
                         CheckDate_Et = data["times"][Fid_WebDate+6].split("T")[1].replace(":","")
                         var rTmp_A  = get_ArrayMax_index( Std_Data["speed"].slice(Fid_WebDate,Fid_WebDate+6) )
                         var rTmp_G  = get_ArrayMax_index( Std_Data["gust"].slice(Fid_WebDate,Fid_WebDate+6) )
-                     };
+                     }
 
                      /* 比對出 該測站的最大陣風 & 時間 */
                      max_std_gust = -99
@@ -550,14 +550,14 @@ function get_Data_MainTable(Fid_WebDate){
                            if( parseFloat( Std_Data["gust"][ixy]) >= max_std_gust){
                               max_std_gust      = parseFloat( Std_Data["gust"][ixy])
                               max_std_gust_time = Std_Data["times"][ixy]
-                           };
-                        };
-                     };
+                           }
+                        }
+                     }
                      if(max_std_gust_time!="-"){
                         str_gust_time = String(max_std_gust_time)
                         max_std_gust_time  = data["times"][Fid_WebDate].split("T")[0]
                         max_std_gust_time += "T"+str_gust_time.slice(0,2) +":"+ str_gust_time.slice(2,4)
-                     };
+                     }
 
                      /* 統整該測站的資訊 */
                      send_Data["wind_avg"]       = rTmp_A[0]
@@ -574,13 +574,13 @@ function get_Data_MainTable(Fid_WebDate){
                   }else{
                      TEMP_S["value"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                      TEMP_S["ovalue"]= [ th_std_info["lon"], th_std_info["lat"], missing_value]
-                  };
+                  }
                   TEMP_S["type"]  = "wind"
                   TEMP_S["time"]  = send_Data["wind_time"]
                }else{
                   TEMP_S["value"] =  [ th_std_info["lon"], th_std_info["lat"], missing_value]
                   TEMP_S["ovalue"]=  [ th_std_info["lon"], th_std_info["lat"], missing_value]
-               };
+               }
                CTS_Data_S[TEMP_S_name] = TEMP_S
 
                /* 比對 該站的平均風 是否有比該鄉鎮的目前記錄還高 */
@@ -598,10 +598,10 @@ function get_Data_MainTable(Fid_WebDate){
                   TownMax_dir_ind   = parseInt(rTmp_A[1]) + parseInt(Fid_WebDate)
                   TownMax_avgW_dir  = data["wind"][key_stids]["dir"][ TownMax_dir_ind]
                   Flag_Std = true
-               };
+               }
 
             }else if(Std_Data="-"){
-               if( typeof data["stids"][key_stids] == 'undefined'){return};
+               if( typeof data["stids"][key_stids] == 'undefined'){return}
                var TEMP_S = {}
                var th_std_info = data["stids"][key_stids]
                console.log("##Lost station:", th_std_info["name"],key_stids )
@@ -611,7 +611,7 @@ function get_Data_MainTable(Fid_WebDate){
                TEMP_S["ovalue"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                TEMP_S["ref"]    = th_std_info
                CTS_Data_S[TEMP_S_name] = TEMP_S
-            };
+            }
          }); /* End of Stids in Town */
 
 
@@ -636,7 +636,7 @@ function get_Data_MainTable(Fid_WebDate){
                Rank_Std["MaxVal_dir_ind"]  = TownMax_dir_ind
                Rank_Std["wind"]            = dict_temp
                max_Town_avg = TownMax_ref
-            };
+            }
 
             var Flag_datatype_2 = (typeof data["wind"][TownMax_name] !== 'undefined')
             if( Flag_datatype_2 ){
@@ -647,12 +647,12 @@ function get_Data_MainTable(Fid_WebDate){
                TEMP_D["name"]  = key_citys + key_towns
                TEMP_D["time"]  = data["times"][Fid_WebDate]
                TEMP_D["value"] = missing_value
-            };
+            }
          }else{
             TEMP_D["name"]  = key_citys + key_towns
             TEMP_D["time"]  = data["times"][Fid_WebDate]
             TEMP_D["value"] = missing_value
-         };
+         }
          CTS_Data_F.push(TEMP_D)
       });
       /* End of 計算Map1 : CTS_Data_F  */
@@ -660,7 +660,7 @@ function get_Data_MainTable(Fid_WebDate){
    console.log("CTS_Data_F:",CTS_Data_F)
    console.log("CTS_Data_S:",CTS_Data_S)
    return [CTS_Data_F,CTS_Data_S]
-};
+}
 /* End of 主表格 */
 
 
@@ -723,14 +723,14 @@ function get_Data_TodayMaxTable(Fid_WebDate){
                            if( parseFloat( Std_Data["gust"][ixy]) >= max_std_gust){
                               max_std_gust      = parseFloat( Std_Data["gust"][ixy])
                               max_std_gust_time = Std_Data["times"][ixy]
-                           };
-                        };
-                     };
+                           }
+                        }
+                     }
                      if(max_std_gust_time!="-"){
                         str_gust_time = String(max_std_gust_time)
                         max_std_gust_time  = data["times"][New_Fid_WebDate].split("T")[0]
                         max_std_gust_time += "T"+str_gust_time.slice(0,2) +":"+ str_gust_time.slice(2,4)
-                     };
+                     }
 
                      /* 統整該測站的資訊 */
                      send_Data["wind_avg"]       = rTmp_A[0]
@@ -747,13 +747,13 @@ function get_Data_TodayMaxTable(Fid_WebDate){
                   }else{
                      TEMP_S["value"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                      TEMP_S["ovalue"]= [ th_std_info["lon"], th_std_info["lat"], missing_value]
-                  };
+                  }
                   TEMP_S["type"]  = "wind"
                   TEMP_S["time"]  = send_Data["wind_time"]
                }else{
                   TEMP_S["value"] =  [ th_std_info["lon"], th_std_info["lat"], missing_value]
                   TEMP_S["ovalue"]=  [ th_std_info["lon"], th_std_info["lat"], missing_value]
-               };
+               }
                CTS_Data_S[TEMP_S_name] = TEMP_S
 
                /* 比對 該站的平均風 是否有比該鄉鎮的目前記錄還高 */
@@ -771,10 +771,10 @@ function get_Data_TodayMaxTable(Fid_WebDate){
                   TownMax_dir_ind   = parseInt(rTmp_A[1]) + parseInt(New_Fid_WebDate)
                   TownMax_avgW_dir  = data["wind"][key_stids]["dir"][ TownMax_dir_ind]
                   Flag_Std = true
-               };
+               }
 
             }else if(Std_Data="-"){
-               if( typeof data["stids"][key_stids] == 'undefined'){return};
+               if( typeof data["stids"][key_stids] == 'undefined'){return}
                var TEMP_S = {}
                var th_std_info = data["stids"][key_stids]
                console.log("##Lost station:", th_std_info["name"],key_stids )
@@ -784,7 +784,7 @@ function get_Data_TodayMaxTable(Fid_WebDate){
                TEMP_S["ovalue"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                TEMP_S["ref"]    = th_std_info
                CTS_Data_S[TEMP_S_name] = TEMP_S
-            };
+            }
          }); /* End of Stids in Town */
 
 
@@ -809,7 +809,7 @@ function get_Data_TodayMaxTable(Fid_WebDate){
                Rank_Std["MaxVal_dir_ind"]  = TownMax_dir_ind
                Rank_Std["wind"]            = dict_temp
                max_Town_avg = TownMax_ref
-            };
+            }
 
             var Flag_datatype_2 = (typeof data["wind"][TownMax_name] !== 'undefined')
             if( Flag_datatype_2 ){
@@ -820,12 +820,12 @@ function get_Data_TodayMaxTable(Fid_WebDate){
                TEMP_D["name"]  = key_citys + key_towns
                TEMP_D["time"]  = data["times"][New_Fid_WebDate]
                TEMP_D["value"] = missing_value
-            };
+            }
          }else{
             TEMP_D["name"]  = key_citys + key_towns
             TEMP_D["time"]  = data["times"][New_Fid_WebDate]
             TEMP_D["value"] = missing_value
-         };
+         }
          CTS_Data_F.push(TEMP_D)
       });
       /* End of 計算Map1 : CTS_Data_F  */
@@ -833,7 +833,7 @@ function get_Data_TodayMaxTable(Fid_WebDate){
    console.log("CTS_Data_F:",CTS_Data_F)
    console.log("CTS_Data_S:",CTS_Data_S)
    return [CTS_Data_F,CTS_Data_S]
-};
+}
 /* End of 今日最大風力 */
 
 
@@ -897,14 +897,14 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
                            if( parseFloat( Std_Data["gust"][ixy]) >= max_std_gust){
                               max_std_gust      = parseFloat( Std_Data["gust"][ixy])
                               max_std_gust_time = Std_Data["times"][ixy]
-                           };
-                        };
-                     };
+                           }
+                        }
+                     }
                      if(max_std_gust_time!="-"){
                         str_gust_time = String(max_std_gust_time)
                         max_std_gust_time  = data["times"][New_Fid_WebDate].split("T")[0]
                         max_std_gust_time += "T"+str_gust_time.slice(0,2) +":"+ str_gust_time.slice(2,4)
-                     };
+                     }
 
                      /* 統整該測站的資訊 */
                      send_Data["wind_avg"]       = rTmp_A[0]
@@ -922,13 +922,13 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
                   }else{
                      TEMP_S["value"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                      TEMP_S["ovalue"]= [ th_std_info["lon"], th_std_info["lat"], missing_value]
-                  };
+                  }
                   TEMP_S["type"]  = "wind"
                   TEMP_S["time"]  = send_Data["wind_time"]
                }else{
                   TEMP_S["value"] =  [ th_std_info["lon"], th_std_info["lat"], missing_value]
                   TEMP_S["ovalue"]=  [ th_std_info["lon"], th_std_info["lat"], missing_value]
-               };
+               }
                CTS_Data_S[TEMP_S_name] = TEMP_S
 
                /* 比對 該站的平均風 是否有比該鄉鎮的目前記錄還高 */
@@ -946,10 +946,10 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
                   TownMax_dir_ind   = parseInt(rTmp_A[1]) + parseInt(New_Fid_WebDate)
                   TownMax_avgW_dir  = data["wind"][key_stids]["dir"][ TownMax_dir_ind]
                   Flag_Std = true
-               };
+               }
 
             }else if(Std_Data="-"){
-               if( typeof data["stids"][key_stids] == 'undefined'){return};
+               if( typeof data["stids"][key_stids] == 'undefined'){return}
                var TEMP_S = {}
                var th_std_info = data["stids"][key_stids]
                console.log("##Lost station:", th_std_info["name"],key_stids )
@@ -959,7 +959,7 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
                TEMP_S["ovalue"] = [ th_std_info["lon"], th_std_info["lat"], missing_value]
                TEMP_S["ref"]    = th_std_info
                CTS_Data_S[TEMP_S_name] = TEMP_S
-            };
+            }
          }); /* End of Stids in Town */
 
 
@@ -984,7 +984,7 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
                Rank_Std["MaxVal_dir_ind"]  = TownMax_dir_ind
                Rank_Std["wind"]            = dict_temp
                max_Town_avg = TownMax_ref
-            };
+            }
 
             var Flag_datatype_2 = (typeof data["wind"][TownMax_name] !== 'undefined')
             if( Flag_datatype_2 ){
@@ -995,12 +995,12 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
                TEMP_D["name"]  = key_citys + key_towns
                TEMP_D["time"]  = data["times"][New_Fid_WebDate]
                TEMP_D["value"] = missing_value
-            };
+            }
          }else{
             TEMP_D["name"]  = key_citys + key_towns
             TEMP_D["time"]  = data["times"][New_Fid_WebDate]
             TEMP_D["value"] = missing_value
-         };
+         }
          CTS_Data_F.push(TEMP_D)
       });
       /* End of 計算Map1 : CTS_Data_F  */
@@ -1008,7 +1008,7 @@ function get_Data_TodayMaxGustTable(Fid_WebDate){
    console.log("CTS_Data_F:",CTS_Data_F)
    console.log("CTS_Data_S:",CTS_Data_S)
    return [CTS_Data_F,CTS_Data_S]
-};
+}
 /* End of 今日最大陣風 */
 
 
@@ -1024,15 +1024,15 @@ function Reform_Date(tStr){
       var ClickDate = DataDate[0]+"-"+DataDate[1]+"-"+padLeft(Replaced_DateString[0],2)+"T"+ padLeft(Replaced_DateString[1],2)
    }else{
       var ClickDate = ShowDate[0]+"-"+ShowDate[1]+"-"+padLeft(Replaced_DateString[0],2)+"T"+ padLeft(Replaced_DateString[1],2)
-   };
+   }
    if(Replaced_DateString.length>3){
       ClickDate += ":00"
    }else{
       ClickDate += ":"+Replaced_DateString[2]
-   };
+   }
    //2021-08-07T07:00
    return ClickDate
-};
+}
 
 
 
@@ -1050,7 +1050,7 @@ function Phone_drag(elemnt){
       var x = parseInt(mybox.style.left)
       var y = parseInt(mybox.style.top)
    });
-};
+}
 
 
 function dragElement(elmnt) {
