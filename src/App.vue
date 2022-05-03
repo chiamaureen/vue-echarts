@@ -19,9 +19,9 @@ export default {
     Map
   },
 
-  data: function() {
-    return {
-        //
+  data() {
+      return {
+          // 
       };
   },
 };
