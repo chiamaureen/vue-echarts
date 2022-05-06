@@ -24,7 +24,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
       my_str_Title = "今日最大陣風："+str_Title.split("T")[0]
    }else{
       my_str_Title = str_Title
-   };
+   }
    
 
    check_value = function(iVal){
@@ -32,7 +32,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
          return "-"
       }else{
          return iVal
-      };
+      }
    };
 
 
@@ -68,7 +68,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
       var L1_Series_Item_BorederColor = "#D3D3D3"
    }else{
       var L1_Series_Item_BorederColor = "white"
-   };
+   }
    $("label#header_title").text("風力監測(10分鐘資料)")
 
    var VisualMap_param = {}
@@ -88,7 +88,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
       VisualMap_param["itemHeight"] = "10"
       VisualMap_param["textStyle_width"] = "20"
       VisualMap_param["textStyle_fontSize"] = "16"
-   };
+   }
    
 
    var Roam_Status = false
@@ -140,7 +140,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
       nOption.series[0]["data"].forEach(function(iVV,index){
          if(iVV.name.indexOf(CITY_name)>=0){
             nOption.series[0]["data"][index]["value"] += 1
-         };
+         }
       });
       chart.setOption(nOption)
    };
@@ -189,7 +189,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                tip += dist_Cname+" - "+ dist_name.substr(3)
             }else{
                tip += dist_Cname+" - "+ dist_name
-            };
+            }
             if( result.data.value > -99  ){
                if( Object.keys(result.data.ovalue[2]).length >1 ){
                   var show_std_list = []
@@ -199,12 +199,12 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      if( !show_std_list.includes(tip_std["name"]) ){ 
                         show_std_list.push(tip_std["name"])
                         tip += "<br /><font color='darkgray' align='center'>" +tip_std["name"] +" (" +tip_std["stid5"]+ ")</font>"
-                     };
+                     }
                   });
                }else{
                      tip += "<br /><font color='darkgray' align='center'>" +result.data.ref["name"] +" (" +result.data.ref["stid5"]+ ")</font>"
-               };
-            };
+               }
+            }
             tip += "<br /><hr width='90%' style='background-color:darkgray; height:1px; border:none;'>"
 
             if(Flag_Select.indexOf("Table")>=0 ){
@@ -216,7 +216,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         var rain_Val = roData[iL]["ovalue"]
                         if(rain_Val == -99){ 
                            rain_Val = "-" 
-                        };
+                        }
                         WindScale = ms2scale(roData["MaxVal_avg"])+"G"+ms2scale(roData["MaxVal_gust"])
                         WindScale_A = ms2scale(roData["MaxVal_avg"])+"級 "
                         WindScale_G = ms2scale(roData["MaxVal_gust"])+"級 "
@@ -231,11 +231,11 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                   }else{
                      tip += "No Data"
                      tip += "</font></span>"
-                  };
+                  }
                }else{
                   tip += "No Data"
                   tip += "</font></span>"
-               };
+               }
                return tip
             }else{
                if(result.value== missing_value || isNaN(parseFloat(result.value)) ){
@@ -246,13 +246,13 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      tip += "<i class='icon-weather-windy' style='color:black'></i>&nbsp;&nbsp;"+result.data.ovalue[2].toFixed(1)
                   }else{
                      tip += "<i class='icon-weather-windy' style='color:black'></i>&nbsp;&nbsp;"+result.value.toFixed(1) 
-                  };
+                  }
 
                   tip += "&nbsp;"+tUnit+"</font>"
                   tip += "<br \><i class='ti-time'></i>&nbsp;"+result.data.time.split("T")[1]+"</font>"
-               };
+               }
                return tip
-            };
+            }
          } 
          
       },
@@ -270,7 +270,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      var new_BorderColor="#D3D3D3"
                   }else{
                      var new_BorderColor="white"
-                  };
+                  }
                   var option = chart.getOption()
                   option.series[0].itemStyle.borderColor = new_BorderColor
                   chart.setOption(option)
@@ -290,7 +290,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                   }else{
                      var Icon_EYE = SVG_eye
                      var Title_EYE = 'Hide Label/Legend'
-                  };
+                  }
                   chart.setOption(option = {
                      toolbox : {feature:{myMore2:{icon: Icon_EYE,title:Title_EYE}}},
                      series :{ label: {show: !Flag_show}},
@@ -318,7 +318,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      var Icon_EYE = SVG_ImageB
                      var Title_EYE = '切換輸出\n圖背透明'
                      var ImageBG_Trans = 'white'
-                  };
+                  }
                   chart.setOption(option = {
                      toolbox : {feature:{myMore3:{icon: Icon_EYE,title:Title_EYE},saveAsImage:{backgroundColor:ImageBG_Trans}}},
                   });
@@ -433,7 +433,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      return ""
                   }else if( res_list.includes(result["color"]) ){
                      return ""
-                  };
+                  }
                   try{
                      dir_str  = result["data"]["ovalue"][2]["MaxVal_dir_name"]
                      WindData = result["data"]["ovalue"][2]
@@ -444,7 +444,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         avgW_str = result["data"]["ovalue"][2]["MaxVal_avg"]
                         avgW_str = ms2scale(WindData["MaxVal_avg"])+"G"+ms2scale(WindData["MaxVal_gust"])
                         avgW_str = ms2scale(WindData["MaxVal_avg"])+"."+ms2scale(WindData["MaxVal_gust"])
-                     };
+                     }
                      if(dir_str=="N"){
                         dir_symbol = "↓ "+avgW_str
                      }else if(dir_str=="W"){
@@ -463,19 +463,19 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         dir_symbol = "↗ "+avgW_str
                      }else{
                         dir_symbol = ""
-                     };
+                     }
                   }catch(err){
                      dir_symbol = ""
-                  };
+                  }
                   if(Flag_Select=="LastHourGustTable" || Flag_Select=="TodayMaxGustTable"){
                      if(dir_symbol!=""){
                         return dir_symbol.split(" ")[1]
                      }else{
                         return dir_symbol
-                     };
+                     }
                   }else{
                      return dir_symbol
-                  };
+                  }
                }
             },
             emphasis: {
@@ -562,9 +562,9 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
             var outData = L2_Data[key]
             if( String(outData["value"][2]).indexOf("-")>=0){
                outData["value"][2] = -9999
-            };
+            }
             reduceData.push( outData )
-         };
+         }
       });
       console.log("ReduceData:",reduceData)
 
@@ -591,7 +591,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                            var wind_Val = roData[spec_Type]
                               if(wind_Val < 0){
                                  wind_Val = "-"
-                              };
+                              }
                               WindScale = ms2scale(roData["wind_avg"])+"G"+ms2scale(roData["wind_gust"])
                               WindScale_A = ms2scale(roData["wind_avg"])+"級 "
                               WindScale_G = ms2scale(roData["wind_gust"])+"級 "
@@ -605,15 +605,15 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         }else{
                            tip += "No Data"
                            tip += "</font></span>"
-                        };
+                        }
                      }else{
                         tip += "No Data"
                         tip += "</font></span>"
-                     };
+                     }
                   }else{
                      tip += "No Data"
                      tip += "</font></span>"
-                  };
+                  }
                   return tip
                }else{
                   if(result.value[2]== missing_value){
@@ -624,12 +624,12 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         tip += "<i class='icon-weather-windy' style='color:black'></i>&nbsp;&nbsp;"+result.data.ovalue[2].toFixed(1)
                      }else{
                         tip += "<i class='icon-weather-windy' style='color:black'></i>&nbsp;&nbsp;"+result.value.toFixed(1) 
-                     };
+                     }
                      tip += "&nbsp;"+tUnit+"</font>"
                      tip += "<br \><i class='ti-time'></i>&nbsp;"+result.data.time.split("T")[1]+"</font>"
-                  };
+                  }
                   return tip
-               };
+               }
             }
          },
          toolbox:{
@@ -663,11 +663,11 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      }else{
                         var Icon_EYE = SVG_eye
                         var Title_EYE = 'Hide Label/Legend'
-                     };
+                     }
                      var dim_series = current_Option.series.length
                      for(var iy=0;iy<dim_series;iy++){
                         current_Option.series[iy]["label"]["show"] = !Flag_show
-                     };
+                     }
                      myChartProe.setOption(current_Option,true) 
                      myChartProe.setOption(option = {
                         toolbox : {feature:{myMore2:{icon: Icon_EYE,title:Title_EYE}}},
@@ -700,8 +700,8 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                            m_option.toolbox[0].feature["myMore3"]["title"] = "Show Part"
                            m_option.toolbox[0].feature["myMore3"]["icon"] = SVG_ZoomIn
                            myChartProe.setOption(m_option,true);
-                        };
-                     };
+                        }
+                     }
                   }
                },
                myMore4:{
@@ -719,7 +719,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         var Icon_EYE = SVG_ImageB
                         var Title_EYE = '切換輸出\n圖背透明'
                         var ImageBG_Trans = 'white'
-                     };
+                     }
                      myChartProe.setOption(option = {
                         toolbox : {feature:{myMore4:{icon: Icon_EYE,title:Title_EYE},saveAsImage:{backgroundColor:ImageBG_Trans}}},
                      });
@@ -834,7 +834,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
          }else{
             var FS = 20
             Flag_LabelShow = true
-         };
+         }
          tempSeries.label={
             color: "#000",
             normal: {
@@ -857,7 +857,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                      return ""
                   }else if( res_list.includes(result["color"]) ){
                      return ""
-                  };
+                  }
                   try{
                      dir_str  = result["data"]["ovalue"][2]["wind_dir_name"]
                      WindData = result["data"]["ovalue"][2]
@@ -868,7 +868,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         //avgW_str = result["data"]["ovalue"][2]["wind_avg"]
                         avgW_str = ms2scale(WindData["wind_avg"])+"."+ms2scale(WindData["wind_gust"])
                         //avgW_str = ms2scale(WindData["wind_avg"])+"G"+ms2scale(WindData["wind_gust"])
-                     };
+                     }
                      if(dir_str=="N"){
                         dir_symbol = "↓ "+avgW_str
                      }else if(dir_str=="W"){
@@ -887,19 +887,19 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                         dir_symbol = "↗ "+avgW_str
                      }else{
                         dir_symbol = ""
-                     };
+                     }
                   }catch(err){
                      dir_symbol = ""
-                  };
+                  }
                   if(Flag_Select=="LastHourGustTable" || Flag_Select=="TodayMaxGustTable"){
                      if(dir_symbol!=""){
                         return dir_symbol.split(" ")[1]
                      }else{
                         return dir_symbol
-                     };
+                     }
                   }else{
                      return dir_symbol
-                  };
+                  }
                }
             },
             emphasis: {
@@ -915,7 +915,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
             tempSeries.label["normal"]["textShadowColor"] = mCLS[mVal]
          }catch(err){
             tempSeries.label["normal"]["textShadowColor"] = "white"
-         };
+         }
 
          tempSeries.labelLine = {"show":true}
          tempSeries.symbol = ["circle","arrow"][1]
@@ -951,7 +951,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
          }else{
             var th_Z = 2
             var th_rippleScale = 0
-         };
+         }
          tempSeries.z = th_Z
          tempSeries.rippleEffect={
             scale: 0,
@@ -960,7 +960,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
          }
          tempSeries.data = [ reduceData[i] ]
          m_option.series.push(tempSeries)
-      };
+      }
       myChartProe.setOption(m_option,true);
       console.log("m_option:",m_option)
       /* End of Set Series to option(L2) */
@@ -970,7 +970,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
       var dim_L2_option_pieces = L2_option.visualMap[0].pieces.length
       for(var k=0;k<dim_L2_option_pieces;k++){
          L2_option.visualMap[0].pieces[k]["symbol"] = "circle"
-      };
+      }
       L2_option.visualMap[0].pieces[dim_L2_option_pieces-1] = {lte:-99,label: 'No Data', color:'black',symbol:'circle'}
       myChartProe.setOption(L2_option);
 
@@ -992,10 +992,10 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
                //m_option.visualMap[0].align = "right"
             }else{
                m_option.visualMap[0].left = "5%"
-            };
+            }
             myChartProe.setOption(m_option,true);
-         };
-      };
+         }
+      }
       ReLocate_County()
       /* End of Relocate Viewpoint for County */
 
@@ -1012,7 +1012,7 @@ var Echarts_MAP = function(inData, title_str, Flag_Light, Flag_HighTemp, Flag_St
               $('#taiwan_map').show()
               $('#city_map').hide()
               $(tr_name).attr("style","")
-           };
+           }
       });
 
    }); /* End of Click to Level 2 */
