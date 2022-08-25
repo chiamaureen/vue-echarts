@@ -3,20 +3,21 @@
         <div 
           id="taiwan_map_chart" 
           class="chart-area"
-          :class="hide_taiwan_map ? 'hide-map': ''"
+          :class="{'hide-map': hide_taiwan_map}"
         ></div>
         <div 
           id="county_detail_chart" 
           class="chart-area"
-          :class="hide_county_map ? 'hide-map': ''"
+          :class="{'hide-map': hide_county_map}"
         ></div>
     </v-container>
 </template>
 
 <script>
 import TJson from "../assets/cTaiwan.json";
-// import ctaiwan from "../assets/town";
-import mapData from '../assets/load_map_data';
+// import map_data from '../assets/load_map_data';
+import map_data_town from '../assets/load_map_data_town';
+import { town_to_county } from '../assets/county_town_table';
 import { Citymap_All } from '../assets/citymap_All.js';
 
 export default {
@@ -35,7 +36,7 @@ export default {
       },
       target_county: '',
       hide_taiwan_map: false,
-      hide_county_map: false
+      hide_county_map: false,
     }
   },
 
@@ -47,13 +48,25 @@ export default {
       const option = {
         title: {
           text: "Taiwan Map",
-          // subtext: "Data from Wikipedia",
-          // sublink: "",
+        },
+        visualMap: {
+          type: 'piecewise',
+          itemGap: 0,
+          itemSymbol: 'rect',
+          splitNumber: 18,
+          min: 0,
+          max: 17,
+          text: ["17", "0"],
+          realtime: false,
+          // calculable: true,
+          inRange: {
+              color: ['#a9a9a9', '#ffffff', '#ffffff', '#ffffff', '#e0ffff', '#7fffd4', '#ffff00', '#ffa500', '#ff0000', '#ff0000', '#ff00ff', '#ff00ff', '#4b0082', '#4b0082', '#4b0082', '#4b0082', '#4b0082', '#4b0082', '#4b0082']
+          },
         },
         series: [{
-            type: 'map',
+            type: 'map', // 必填
+            map: 'taiwan', // 必填
             roam: true,
-            map: 'taiwan',
             boundingCoords:[ [118,26.5], [122.4,21.5] ],
             center: [120.3, 23.8],
             layoutCenter: ['50%', '50%'],
@@ -76,34 +89,25 @@ export default {
                     color: '#333'
                 },
                 itemStyle:{
-                  areaColor: 'none',
-                  borderColor : '#999',
-                  borderWidth: 1,  
+                    areaColor: 'none',
+                    borderColor : '#999',
+                    borderWidth: 1,  
                 },
             },
             label: {
-                show: true,
-            //     borderColor:"black",
-            //     fontSize:14,
-            //     color:"black",
-                //  textBorderColor:["darkgray","#337DFF"][1],
-                //  textBorderWidth:3,
-                //  textShadowBlur:9,
-                //  textShadowColor:["white","#337DFF","#33CFFF"][2],
-                //  textShadowOffsetX:0,
-                //  textShadowOffsetY:0,
+                // show: true,
             },
             select:{
                 label: {
-                  show: true
+                    show: true
                 },
                 itemStyle: function(val){
-                  return val;
+                    return val;
                 }
             },
-            markArea: {label:{show:false}},
+            markArea: {label:{show: false}},
             nameProperty: 'name',
-            data : mapData.data[0],
+            data: this.get_county_data()
         }],
       };
       county_map_chart.setOption(option);
@@ -123,6 +127,20 @@ export default {
       this.$echarts.registerMap("county", current_county_JSON);
 
       const option = {
+        visualMap: {
+          type: 'piecewise',
+          itemGap: 0,
+          itemSymbol: 'rect',
+          splitNumber: 18,
+          min: 0,
+          max: 17,
+          text: ["17", "0"],
+          realtime: false,
+          // calculable: true,
+          inRange: {
+              color: ['#a9a9a9', '#ffffff', '#ffffff', '#ffffff', '#e0ffff', '#7fffd4', '#ffff00', '#ffa500', '#ff0000', '#ff0000', '#ff00ff', '#ff00ff', '#4b0082', '#4b0082', '#4b0082', '#4b0082', '#4b0082', '#4b0082', '#4b0082']
+          },
+        },
         series: [{
             type: 'map',
             map: 'county',
@@ -143,6 +161,7 @@ export default {
             label: {
                 show: true,
             },
+            data: map_data_town.data[0]
         }],
       };
       county_detail_chart.setOption(option);
@@ -150,13 +169,24 @@ export default {
       // 如果點擊空白處的話回上一層
       county_detail_chart.getZr().on('click', (item) => {
         if(item.target === undefined) {
-          console.log('回上一層');
+          // console.log('回上一層');
           this.hide_taiwan_map = false;
           county_detail_chart.dispose();
           this.hide_county_map = true;
         }
       })
-    }
+    },
+
+    get_county_data () {
+        let result = [];
+        for (let key in town_to_county) {
+            result.push({
+                'name': key,
+                'value': Math.max(...map_data_town.data[0].filter(x => x.name.includes(key)).map(x => x.value))
+            });
+        }
+        return result;
+    },
   },
 };
 </script>
@@ -167,6 +197,6 @@ export default {
 
   .chart-area {
       width: 1000px;
-      height: 600px;
+      height: 500px;
   }
 </style>

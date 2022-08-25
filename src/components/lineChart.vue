@@ -34,7 +34,10 @@ export default {
       // 指定圖表的配置項和資料
       var option = {
         title: {
-          text: "一週價格走勢"
+          text: "一週價格走勢",
+          // subtext: " ",
+          // itemGap: 60
+          borderWidth: 20
         },
         tooltip: {},
         legend: {
